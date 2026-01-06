@@ -53,9 +53,13 @@ java -jar APKEditor.jar d -i TargetGame.apk
 4. Paste the `spy` folder here.
 * *Path should look like:* `TargetGame/smali/classes/com/spy/MemorySpy.smali`
 
+### 3. Copy the JNI library file
+
+1. Find the libmembridge.so file in this repository.
+2. Copy it into the `TargetGame/lib/arm64-v8a/` folder.
 
 
-### 3. Hook the Entry Point
+### 4. Hook the Entry Point
 
 You need to start the Spy when the app launches.
 
@@ -70,7 +74,7 @@ invoke-static {}, Lcom/spy/MemorySpy;->start()V
 
 
 
-### 4. Rebuild & Install
+### 5. Rebuild & Install
 
 Rebuild the APK using APKEditor:
 
